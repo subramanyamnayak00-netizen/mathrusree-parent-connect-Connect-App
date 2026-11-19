@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0646a5"><meta name="description" content="Mathrusree Study Circle Parent Connect">
+  <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg">
+  <title>Mathrusree Study Circle | Parent Connect</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">M</span><span><b>MATHRUSREE</b><small>STUDY CIRCLE</small></span></a>
+  <div class="top-actions"><button id="langBtn" class="ghost">తెలుగు</button><button id="logoutBtn" class="ghost hidden">Sign out</button></div>
+</header>
+<main id="app">
+  <section id="loginView" class="login-layout">
+    <div class="welcome-panel">
+      <span class="eyebrow">STEP IN CONFIDENTLY · STEP OUT SUCCESSFULLY</span>
+      <h1>Learning grows<br><em>when we connect.</em></h1>
+      <p>One simple place for parents to follow attendance, results, homework and important updates.</p>
+      <div class="feature-pills"><span>✓ Attendance</span><span>✓ Test results</span><span>✓ Homework</span><span>✓ Updates</span></div>
+    </div>
+    <form id="loginForm" class="panel login-card">
+      <div class="logo-circle">✦</div><h2>Welcome back</h2><p class="muted">Sign in to your Parent Connect account</p>
+      <label>Email address<input id="email" type="email" autocomplete="username" required placeholder="name@example.com"></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required placeholder="Your password"></label>
+      <button class="primary full" type="submit">Sign in</button>
+      <button id="demoBtn" class="secondary full" type="button">Explore demo (sample data)</button>
+      <p class="tiny muted">For the real institute portal, use the account provided by the administrator.</p>
+      <p id="loginError" class="error" role="alert"></p>
+    </form>
+  </section>
+  <section id="dashboardView" class="hidden">
+    <div class="dashboard-heading"><div><span class="eyebrow">PARENT CONNECT</span><h1 id="greeting">Welcome!</h1><p id="welcomeSub" class="muted">Your child's learning partner</p></div><span id="roleBadge" class="role-badge">PARENT</span></div>
+    <div id="studentStrip" class="student-strip"></div>
+    <nav class="tabs" id="tabs">
+      <button data-page="overview" class="active">Overview</button><button data-page="attendance">Attendance</button><button data-page="results">Test results</button><button data-page="homework">Homework</button><button data-page="notices">Notices</button><button data-page="gallery">Gallery</button><button data-page="fees">Fee details</button>
+    </nav>
+    <section id="pageContent"></section>
+  </section>
+</main>
+<footer><div><b>MATHRUSREE STUDY CIRCLE</b><p>SRT-530, Opp. GHMC Sports Complex, Sanathnagar</p></div><p>Parent Connect · English | తెలుగు</p></footer>
+<div id="toast" class="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body></html>
